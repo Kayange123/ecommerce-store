@@ -20,6 +20,10 @@ export const getCategory = async (id: string): Promise<ICategory> => {
   }
 };
 
+export const getBillboards = async (): Promise<IBillboard[]> => {
+  const res = await fetch(`${url}/billboards`);
+  return await res.json();
+};
 export const getBillboard = async (id: string): Promise<IBillboard> => {
   try {
     const res = await fetch(`${url}/billboards/${id}`);
