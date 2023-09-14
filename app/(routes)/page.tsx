@@ -1,4 +1,4 @@
-import { getBillboard, getBillboards, getProducts } from "@/actions/actions";
+import { getBillboards, getProducts } from "@/actions/actions";
 import Billboard from "@/components/Billboard/Billboard";
 import Container from "@/components/ui/Container";
 import ProductList from "@/components/product/ProductList";
@@ -7,6 +7,7 @@ export const revalidate = 0;
 
 export default async function HomePage() {
   const billboards = await getBillboards();
+
   const randomIndex = Math.floor(Math.random() * billboards?.length);
 
   const billboard = billboards[randomIndex];
