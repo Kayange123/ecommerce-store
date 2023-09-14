@@ -17,15 +17,16 @@ const CartItem = ({ item }: CartItemProps) => {
         <Image
           alt="Image"
           src={item.images?.[0]?.url}
+          loading="lazy"
           fill
           className="object-cover object-center"
         />
       </div>
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
-        <div className="absolute top-0 right-0">
+        <div className="absolute right-2 top-2">
           <IconButton
-            icon={<X size={15} />}
             onClick={() => cart.removeItem(item?.id)}
+            icon={<X size={16} color="red" />}
           />
         </div>
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
