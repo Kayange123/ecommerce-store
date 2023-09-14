@@ -22,7 +22,7 @@ const Summary = () => {
       removeAll();
     }
     if (searchParams.get("canceled")) {
-      toast.success("Something went wrong");
+      toast.error("Payment process cancelled");
     }
   }, [searchParams, removeAll]);
   const onCheckout = async () => {
