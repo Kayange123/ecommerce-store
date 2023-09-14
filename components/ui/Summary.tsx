@@ -40,8 +40,18 @@ const Summary = () => {
           <p className="text-base font-medium text-gray-900">Total:</p>
           <Currency value={totalPrice as number} />
         </div>
+        <div className="flex items-center justify-between border-t pt-4 border-gray-200">
+          <p className="text-base font-medium text-gray-900">
+            Number of products:
+          </p>
+          <p>{items?.length}</p>
+        </div>
       </div>
-      <Button onClick={onCheckout} className="w-full mt-2 text-center">
+      <Button
+        disabled={items?.length === 0}
+        onClick={onCheckout}
+        className="w-full mt-8 text-center"
+      >
         checkout
       </Button>
     </div>
