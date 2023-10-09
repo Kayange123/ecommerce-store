@@ -16,7 +16,7 @@ const Footer = () => {
             target="_blank"
           >
             <span className="text-slate-500 text-xs">powered by</span>
-            <Globe className="h-4 w-4 text-blue-600" />
+            <Globe className="h-4 w-4 text-blue-600 ml-2" />
           </Link>
         </p>
       </div>
