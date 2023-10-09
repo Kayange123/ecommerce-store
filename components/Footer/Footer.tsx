@@ -10,9 +10,13 @@ const Footer = () => {
           &copy; {year} Baimi-ecommerce store. All rights reserved.
         </p>
         <p>
-          <Link rel="noopener" href="https://bit.ly/kayange" target="_blank">
-            <span>powered by</span>
-            <Globe className="h-4 w-4" />
+          <Link
+            className="flex flex-row"
+            href="https://bit.ly/kayange"
+            target="_blank"
+          >
+            <span className="text-slate-500 text-xs">powered by</span>
+            <Globe className="h-4 w-4 text-blue-600" />
           </Link>
         </p>
       </div>
